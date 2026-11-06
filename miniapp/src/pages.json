@@ -1,0 +1,31 @@
+{
+  "pages": [
+    { "path": "pages/index/index", "style": { "navigationBarTitleText": "设备管理" } },
+    { "path": "pages/login/index", "style": { "navigationBarTitleText": "登录" } },
+    { "path": "pages/equipment/detail", "style": { "navigationBarTitleText": "设备详情" } },
+    { "path": "pages/fuel/record", "style": { "navigationBarTitleText": "加油登记" } },
+    { "path": "pages/operation/log", "style": { "navigationBarTitleText": "运转记录" } },
+    { "path": "pages/operation/handover", "style": { "navigationBarTitleText": "交接班" } },
+    { "path": "pages/repair/request", "style": { "navigationBarTitleText": "报修申请" } },
+    { "path": "pages/training/list", "style": { "navigationBarTitleText": "安全培训" } },
+    { "path": "pages/training/detail", "style": { "navigationBarTitleText": "培训详情" } },
+    { "path": "pages/history/list", "style": { "navigationBarTitleText": "我的记录" } }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "设备管理",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#409EFF",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/history/list", "text": "记录" },
+      { "pagePath": "pages/training/list", "text": "培训" }
+    ]
+  },
+  "condition": {}
+}

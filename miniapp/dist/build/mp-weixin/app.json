@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/equipment/detail",
+    "pages/fuel/record",
+    "pages/operation/log",
+    "pages/operation/handover",
+    "pages/repair/request",
+    "pages/training/list",
+    "pages/training/detail",
+    "pages/history/list"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "设备管理",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#409EFF",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/history/list",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/training/list",
+        "text": "培训"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

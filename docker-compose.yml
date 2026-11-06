@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  # ==================== 后端 API 服务 ====================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: equipment-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - backend-uploads:/app/uploads
+      - backend-data:/app/data
+    environment:
+      - DATABASE_URL=sqlite:///./data/equipment.db
+      - JWT_SECRET_KEY=your-secret-key-change-in-production
+      - QR_BASE_URL=http://your-server-ip:8000
+      - WX_APPID=your-wechat-appid
+      - WX_SECRET=your-wechat-secret
+      - CORS_ORIGINS=http://localhost:5173,http://your-frontend-domain
+    restart: unless-stopped
+
+  # ==================== 后台管理前端 ====================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: equipment-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend-uploads:
+  backend-data:

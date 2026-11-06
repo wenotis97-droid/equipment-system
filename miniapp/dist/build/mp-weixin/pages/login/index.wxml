@@ -1,0 +1,1 @@
+<view class="container data-v-a4f2b9d8"><view class="login-card data-v-a4f2b9d8"><view class="title data-v-a4f2b9d8">设备管理系统</view><view class="subtitle data-v-a4f2b9d8">使用人员登录</view><button class="wx-btn data-v-a4f2b9d8" bindtap="{{a}}">微信一键登录</button><view class="tip data-v-a4f2b9d8">首次登录将自动创建操作员账号</view></view></view>

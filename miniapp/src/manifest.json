@@ -1,0 +1,17 @@
+{
+  "appid": "__UNI__EQUIPMENTMINI",
+  "description": "设备管理系统微信小程序",
+  "versionName": "1.0.0",
+  "versionCode": 100,
+  "transformPx": false,
+  "app-plus": {
+    "modules": {},
+    "distribute": {}
+  },
+  "mp-weixin": {
+    "appid": "your-miniapp-appid",
+    "setting": {
+      "urlCheck": false
+    }
+  }
+}

@@ -1,0 +1,34 @@
+web:
+  - name: equipment-backend
+    plan: free
+    region: singapore
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./data/equipment.db
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+    disk:
+      - name: data
+        mountPath: /opt/render/project/src/data
+        sizeGB: 1
+
+  - name: equipment-frontend
+    plan: free
+    region: singapore
+    env: node
+    rootDir: frontend
+    buildCommand: npm install -g pnpm && pnpm install && pnpm build
+    startCommand: python3 server.py
+    envVars:
+      - key: NODE_VERSION
+        value: "22.13.0"
+      - key: PORT
+        from: backend
