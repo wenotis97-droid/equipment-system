@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+
+# 数据库和数据文件
+*.db
+*.sqlite
+backend/data/
+backend/uploads/qrcodes/
+
+# 环境
+.env
+.env.local
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
